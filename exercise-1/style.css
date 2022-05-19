@@ -27,6 +27,7 @@
 }
 
 .lottieWrapper {
+  transform: translateY(15%);
   width: 240px;
   height: 240px;
   margin: 0 auto;
@@ -52,6 +53,21 @@
   animation-timing-function: ease-in-out;
 }
 
+.welcomeSubTitle {
+  transform: translateY(-158px);
+  font-size: 15px;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  opacity: 0;
+  animation-name: welcomeSubTitleCompletion;
+  animation-duration: 0.333s;
+  animation-delay: 3.833s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
 @keyframes backgroundCompletion {
   from {
     background-color: rgb(27, 27, 28);
@@ -63,10 +79,10 @@
 
 @keyframes iconCompletion {
   from {
-    transform: translateY(0) scale(100%);
+    transform: translateY(15%) scale(100%);
   }
   to {
-    transform: translateY(-140px) scale(33%);
+    transform: translateY(-100px) scale(33%);
   }
 }
 
@@ -76,7 +92,16 @@
     opacity: 0;
   }
   to {
-    transform: translateY(-208px);
+    transform: translateY(-168px);
+    opacity: 1;
+  }
+}
+
+@keyframes welcomeSubTitleCompletion {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
