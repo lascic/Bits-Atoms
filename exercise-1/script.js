@@ -12,7 +12,8 @@ const ids = ["card",
             "lottieWrapper",
             "welcomeTitle", 
             "welcomeSubTitle", 
-            "continueButton"]
+            "continueButton",
+            "infoButton"]
 
 function resetAnimation() {
     ids.forEach(id => {
