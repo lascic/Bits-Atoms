@@ -10,15 +10,19 @@
 </head>
 
 <body>
-    <div class="card">
-        <div class="lottieWrapper">
+    <div class="card" id="card">
+        <div class="lottieWrapper" id="lottieWrapper">
             <div id="animation"></div>
         </div>
-        <h1 class="welcomeTitle">
+        <h1 class="welcomeTitle" id="welcomeTitle">
             Welcome to</br> Fløra Lab
         </h1>
-        <p class="welcomeSubTitle">Detect flowers in an instant and get alerted about toxic species.</p>
-        <button class="continueButton">Get started</button>
+        <p class="welcomeSubTitle" id="welcomeSubTitle">
+            Detect flowers in an instant and get alerted about toxic species
+        </p>
+        <button onclick="resetAnimation()" class="continueButton"  id="continueButton">
+            Get started
+        </button>
     </div>
 
     <script src="resources/lottie.js"></script>
