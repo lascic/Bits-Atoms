@@ -6,19 +6,16 @@ var animation = bodymovin.loadAnimation({
     path: "resources/flora-app-icon-animation.json"
 });
 
+const ids = ["card", "lottieWrapper", "welcomeTitle", "welcomeSubTitle", "continueButton"]
+
 function resetAnimation() {
-    var card = document.getElementById("card");
-    var lottieWrapper = document.getElementById("lottieWrapper");
-    var welcomeTitle = document.getElementById("welcomeTitle");
-    var welcomeSubTitle = document.getElementById("welcomeSubTitle")
-    var continueButton = document.getElementById("continueButton")
-
-    card.classList.remove("card");
-    lottieWrapper.classList.remove("lottieWrapper");
-    welcomeTitle.classList.remove("welcomeTitle");
-    welcomeSubTitle.classList.remove("welcomeSubTitle");
-    continueButton.classList.remove("continueButton");
-
+    ids.forEach(id => {
+        var element = document.getElementById(id);
+        element.classList.remove(id);
+        void element.offsetWidth;
+        element.classList.add(id);
+    })
+    
     animation.destroy();
     animation = bodymovin.loadAnimation({
         container: document.getElementById("animation"),
@@ -27,16 +24,4 @@ function resetAnimation() {
         autoplay: true,
         path: "resources/flora-app-icon-animation.json"
     });
-
-    void card.offsetWidth;
-    void lottieWrapper.offsetWidth;
-    void welcomeTitle.offsetWidth;
-    void welcomeSubTitle.offsetWidth;
-    void continueButton.offsetWidth;
-
-    card.classList.add("card");
-    lottieWrapper.classList.add("lottieWrapper");
-    welcomeTitle.classList.add("welcomeTitle");
-    welcomeSubTitle.classList.add("welcomeSubTitle");
-    continueButton.classList.add("continueButton");
 }
