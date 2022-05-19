@@ -1,12 +1,18 @@
-var animation = bodymovin.loadAnimation({
+const animationConfiguration = {
     container: document.getElementById("animation"),
     renderer: "svg",
     loop: false,
     autoplay: true,
     path: "resources/flora-app-icon-animation.json"
-});
+}
 
-const ids = ["card", "lottieWrapper", "welcomeTitle", "welcomeSubTitle", "continueButton"]
+var animation = bodymovin.loadAnimation(animationConfiguration);
+
+const ids = ["card",
+            "lottieWrapper",
+            "welcomeTitle", 
+            "welcomeSubTitle", 
+            "continueButton"]
 
 function resetAnimation() {
     ids.forEach(id => {
@@ -15,13 +21,7 @@ function resetAnimation() {
         void element.offsetWidth;
         element.classList.add(id);
     })
-    
+
     animation.destroy();
-    animation = bodymovin.loadAnimation({
-        container: document.getElementById("animation"),
-        renderer: "svg",
-        loop: false,
-        autoplay: true,
-        path: "resources/flora-app-icon-animation.json"
-    });
+    animation = bodymovin.loadAnimation(animationConfiguration);
 }
