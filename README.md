@@ -1,4 +1,5 @@
-# Bits and Atoms
+# Bits & Atoms
+Bits & Atoms is an Interaction Design BA module series covering creative coding, web development and physical computing during the first four semesters in preparation for related modules.
 
 ## Table of Contents
 - [Spring Semester 2022](#spring-semester-2022)
