@@ -12,8 +12,16 @@
 
 <body>
     <div class="card">
-        <h1>Card</h1>
-        <p>Everything here is your canvas...</p>
+        <h1 class="header">Continue with StuDAZ-ID</h1>
+        <form class="loginWrapper" name="form" onsubmit="return checkOverall()">
+            <div class="em-font">Email</div>
+            <input autocomplete="off" type="text" name="email">
+            <div id="emailShortError">Email's too short</div>
+            <div class="em-font pw-font">Password</div>
+            <input type="password" name="password">
+            <div id="passwordShortError">Password's too short</div>
+            <button type="submit">Sign In</button>
+        </form>
     </div>
 </body>
 
